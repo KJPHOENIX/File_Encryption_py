@@ -17,3 +17,5 @@
         4.When you want to Decrypt a file you, will select the file  Click DECRYPT Button to decrypt..
         5.Click RESET Button to reset 
         6.You can also Click quit Button during Encryption/Decryption to stop the process.
+
+![file_encrypt_gui](https://github.com/KJPHOENIX/File_Encryption_py/assets/140408460/37ca2ef4-2eb2-4d1a-8f5f-27433554d1ea)
