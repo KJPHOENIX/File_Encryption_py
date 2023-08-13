@@ -16,9 +16,6 @@ import base64
 import getpass
 
 global filename
-key = "zNZJLNU9U4j8wv6MMjJRXKbA5sCInwNs2lqPS7ueKfo="
-
-
 
 
 w = Tk()
@@ -51,10 +48,11 @@ def encrypt():
     
     try:
         b = a2.get()
+
+        key = a5.get()
          
         fernet = Fernet(key)
 
-        a5.insert(END,key)
     
         with open(b, 'rb') as file:
             original = file.read()
@@ -71,19 +69,13 @@ def encrypt():
         e = messagebox.showerror("info","already file Encrypt sucessfully")
 
 
-    
-
-    
 
 def decrypt():
 
     try:
         h = a2.get()
 
-        #key = "zNZJLNU9U4j8wv6MMjJRXKbA5sCInwNs2lqPS7ueKfo=" #genrated your own fernet key and  replace it
-
-
-        a5.insert(END,key)
+        key = a5.get()
 
         fernet = Fernet(key)
         with open(h, 'rb') as enc_file:
@@ -121,7 +113,7 @@ a2.place(x = 5, y = 50,width=490,height=50)
 a3 = Button(w,text = "Select file",command=openfile,bg="blue",activebackground="skyblue",font = ("optima",12,"bold"))
 a3.place(x =5, y =120,width=490,height=50)
 
-a4 = Label(w,text="Genrating secret key..",font = ("optima",12),fg="yellow",bg="black")
+a4 = Label(w,text="Enter fernet Generating key..",font = ("optima",12),fg="yellow",bg="black")
 a4.place(x=5,y=180)
 
 a5 = Entry(w,font = ("optima",12))
