@@ -131,5 +131,8 @@ a8.place(x=5,y=340,width=490,height=50)
 a9 = Button(w,text="Quit",command = q,background="darkgray",activebackground="red",font = ("optima",12,"bold"))
 a9.place(x=5,y=400,width=490,height=50)
 
+a10 = Label(w,text ="KJPHOENIX",font = ("optima",12,"bold"), bg = "lightgreen")
+a10.place(x = 200, y = 460)
+
 
 w.mainloop()
